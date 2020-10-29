@@ -1,0 +1,21 @@
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree {
+  width: 50%;
+
+  .mat-tree-node {
+    min-height: 24px;
+  }
+  .mat-tree-node:hover {
+      background-color: #cccccc;
+  }
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
