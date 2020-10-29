@@ -1,0 +1,38 @@
+.op-menu {
+  min-width: 180px;
+  color: #525252;
+
+  .op-menu__main:hover,
+  .op-menu__sub:hover,
+  .op-menu__sub-item:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+  }
+
+  .op-menu__main,
+  .op-menu__sub,
+  .op-menu__sub-item {
+    line-height: 2;
+    padding: 3px;
+  }
+
+  .selected {
+    background-color: #e0e0e0;
+    color: #161616;
+    font-weight: 600;
+    border-left: 5px #0062ff solid;
+  }
+
+  .op-menu__sub {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .op-menu__text {
+    flex: 1;
+  }
+
+  .op-menu__sub-item {
+    padding-left: 15px;
+  }
+}

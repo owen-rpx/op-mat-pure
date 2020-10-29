@@ -1,0 +1,16 @@
+<form class="op-login__form" [formGroup]="myForm">
+  <h3>Login</h3>
+  <mat-form-field class="op-login__input">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [formControl]="name">
+  </mat-form-field>
+
+  <mat-form-field class="op-login__input">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [formControl]="pwd">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
+</form>
+
+

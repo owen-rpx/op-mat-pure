@@ -1,0 +1,17 @@
+<mat-nav-list class="op-menu">
+    <div class="op-menu__item" *ngFor="let nav of menuList">
+        <div mat-list-item class="op-menu__main op-menu__text" *ngIf="!hasChildren(nav)" [ngClass]="{'selected': nav.selected}" (click)="goTo(nav)">{{nav.text}}</div>
+
+        <div mat-list-item  *ngIf="hasChildren(nav)">
+            <div class="op-menu__sub" (click)="toggleMenu(nav)" [ngClass]="{'selected': nav.selected}">
+                <span class="op-menu__text">{{nav.text}}</span>
+                <mat-icon class="op-menu__icon" *ngIf="nav.show">keyboard_arrow_up</mat-icon>
+                <mat-icon class="op-menu__icon" *ngIf="!nav.show">keyboard_arrow_down</mat-icon>
+            </div>
+            <div *ngFor="let sub of nav.children" [hidden]="!nav.show">
+                <div mat-list-item [ngClass]="{'selected': sub.selected}" class="op-menu__sub-item op-menu__text" *ngIf="!hasChildren(sub)" (click)="goTo(sub, nav)">{{sub.text}}</div>
+            </div>
+        </div>
+
+    </div>
+</mat-nav-list>
